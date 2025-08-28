@@ -391,51 +391,215 @@
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
             
             .hero h2 {
                 font-size: 2.5rem;
             }
+            
+            .ministries-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
         }
         
         @media (max-width: 768px) {
             .header-container {
+                position: relative;
+                padding: 10px 0;
+            }
+            
+            .logo {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
             }
             
+            .logo img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .logo h1 {
+                font-size: 1.5rem;
+            }
+            
             nav ul {
-                margin-top: 20px;
+                display: none;
                 flex-direction: column;
                 align-items: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+                z-index: 1000;
+            }
+            
+            nav ul.mobile-menu-active {
+                display: flex;
             }
             
             nav ul li {
-                margin: 10px 0;
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px 20px;
             }
             
             .mobile-menu-btn {
                 display: block;
                 position: absolute;
-                top: 20px;
+                top: 50%;
+                transform: translateY(-50%);
                 right: 20px;
             }
             
-            .mobile-menu {
-                display: none;
+            .hero {
+                padding: 60px 0;
             }
             
             .hero h2 {
                 font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 25px;
+                padding: 0 20px;
             }
             
             .hero-btns {
                 flex-direction: column;
                 align-items: center;
+                gap: 10px;
+                padding: 0 20px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .container {
+                width: 95%;
             }
             
             .section-title h2 {
                 font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            
+            .section-title p {
+                font-size: 1rem;
+                padding: 0 10px;
+            }
+            
+            .welcome-content p {
+                font-size: 1rem;
+                margin-bottom: 15px;
+                text-align: left;
+                padding: 0 10px;
+            }
+            
+            .about-content {
+                text-align: center;
+            }
+            
+            .about-text {
+                padding: 0 10px;
+            }
+            
+            .about-text h3 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            
+            .about-text p {
+                font-size: 1rem;
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+            
+            .ministries-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .ministry-card {
+                padding: 25px 20px;
+            }
+            
+            .ministry-card h3 {
+                font-size: 1.3rem;
+                margin-bottom: 10px;
+            }
+            
+            .ministry-card p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+            
+            .cta {
+                padding: 50px 0;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            
+            .cta p {
+                font-size: 1rem;
+                padding: 0 20px;
+                margin-bottom: 25px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .footer-column h3 {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+            
+            .footer-column p,
+            .footer-column ul li {
+                font-size: 0.95rem;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .footer-bottom {
+                padding-top: 20px;
+            }
+            
+            .footer-bottom p {
+                font-size: 0.9rem;
+                margin-bottom: 10px;
+            }
+            
+            .scripture-banner {
+                padding: 15px;
+                margin: 20px 0;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -639,7 +803,7 @@
     <script>
         // Mobile menu toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('mobile-menu');
+            document.querySelector('nav ul').classList.toggle('mobile-menu-active');
         });
     </script>
 </body>
