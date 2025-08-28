@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faith Over Brokenness Ministries</title>
+    <title>About Us - Faith Over Brokenness Ministries</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
@@ -184,129 +184,125 @@
             color: var(--royal-blue);
         }
         
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(65, 105, 225, 0.8), rgba(75, 0, 130, 0.8)), url('https://source.unsplash.com/random/1600x900/?faith') no-repeat center center/cover;
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(65, 105, 225, 0.8), rgba(75, 0, 130, 0.8)), url('https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
-            padding: 100px 0;
+            padding: 80px 0;
         }
         
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero h2 {
+        .page-header h1 {
             font-size: 3rem;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        /* Welcome Section */
-        .welcome {
-            background: var(--soft-grey);
+        /* Story Section */
+        .story-content {
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
         }
         
-        .welcome-content {
-            max-width: 900px;
-            margin: 0 auto;
+        .story-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
         }
         
-        /* About Section */
-        .about-content {
+        /* Vision Mission Grid */
+        .vision-mission-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            align-items: center;
+            margin: 40px 0;
         }
         
-        .about-img {
+        .vision-card, .mission-card {
+            background: var(--white);
+            padding: 30px;
             border-radius: 10px;
-            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s;
+        .vision-card {
+            border-top: 5px solid var(--gold);
         }
         
-        .about-img:hover img {
-            transform: scale(1.05);
+        .mission-card {
+            border-top: 5px solid var(--royal-blue);
         }
         
-        /* Ministries Section */
-        .ministries {
-            background: var(--soft-grey);
+        .vision-card h3, .mission-card h3 {
+            color: var(--deep-purple);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
         }
         
-        .ministries-grid {
+        /* Objectives Grid */
+        .objectives-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin: 40px 0;
         }
         
-        .ministry-card {
+        .objective-card {
             background: var(--white);
-            padding: 30px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
         }
         
-        .ministry-card:hover {
+        .objective-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .ministry-icon {
+        .objective-icon {
             font-size: 2.5rem;
             color: var(--royal-blue);
             margin-bottom: 20px;
         }
         
-        .ministry-card h3 {
+        .objective-card h4 {
             color: var(--deep-purple);
             margin-bottom: 15px;
         }
         
-        /* Call to Action */
-        .cta {
-            background: linear-gradient(rgba(65, 105, 225, 0.9), rgba(65, 105, 225, 0.9)), url('https://source.unsplash.com/random/1600x900/?prayer') no-repeat center center/cover;
-            color: var(--white);
+        /* Scripture Foundation */
+        .scripture-foundation {
+            background: var(--soft-grey);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .scripture-foundation h3 {
+            color: var(--deep-purple);
             text-align: center;
-            padding: 80px 0;
+            margin-bottom: 30px;
         }
         
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        .scripture-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         
-        .cta p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
+        .scripture-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .scripture-item strong {
+            color: var(--royal-blue);
         }
         
         /* Footer */
@@ -389,12 +385,8 @@
         
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .about-content {
+            .vision-mission-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .hero h2 {
-                font-size: 2.5rem;
             }
         }
         
@@ -421,17 +413,8 @@
                 right: 20px;
             }
             
-            .mobile-menu {
-                display: none;
-            }
-            
-            .hero h2 {
+            .page-header h1 {
                 font-size: 2rem;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
             }
             
             .section-title h2 {
@@ -456,7 +439,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" style="color: var(--royal-blue);">About</a></li>
                     <li><a href="sermons.html">Sermons</a></li>
                     <li><a href="discipleship.html">Discipleship</a></li>
                     <li><a href="prayer.html">Prayer</a></li>
@@ -467,129 +450,138 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h2>Raising a generation healed, restored, discipled and released</h2>
-            <p>Through the Word, Spirit, and Christ-centered discipleship, we journey with the broken, lifting them from despair to restoration.</p>
-            <div class="hero-btns">
-                <a href="prayer.html" class="btn">Request Prayer</a>
-                <a href="give.html" class="btn btn-gold">Partner With Us</a>
-            </div>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Discover how Faith Over Brokenness Ministries was born</p>
         </div>
     </section>
 
-    <!-- Welcome Section -->
-    <section class="section welcome">
-        <div class="container welcome-content">
-            <div class="section-title">
-                <h2>Welcome to Faith Over Brokenness Ministries</h2>
-                <p>We are a Christ-centered ministry called to bring healing, hope, and restoration to the brokenhearted.</p>
-            </div>
-            
-            <p>We stand today as living testimonies that faith in Jesus truly overcomes every season of life. Though we have walked through valleys of disappointment and faced the weight of brokenness, God's love never let us go. He lifted us, restored our hope, and taught us that faith is not about avoiding trials, but about trusting Him through them.</p>
-            
-            <div class="scripture-banner">
-                <p>"This is the victory that has overcome the world—even our faith." — 1 John 5:4</p>
-            </div>
-            
-            <p>Our stories are not about what we lost, but about the One we gained—Christ, our strength and our victory.</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about">
+    <!-- Our Story Section -->
+    <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Our Founder</h2>
-                <p>Meet Priscar Werunga, the founder of Faith Over Brokenness Ministries</p>
+                <h2>Our Story</h2>
+                <p>How Faith Over Brokenness Was Born</p>
             </div>
             
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="public/images/founder.jpg" alt="Priscar Werunga">
+            <div class="story-content">
+                <p>Faith Over Brokenness was birthed out of a personal journey with God—a walk through seasons of pain, disappointment, and unanswered questions. What looked like an ending became a new beginning when the Lord revealed that even in brokenness, His purpose still stands.</p>
+                
+                <p>As I leaned on Christ, He showed me that faith is not just believing for blessings, but trusting Him in the fire, under the broom tree, and on the mountain top. Out of that revelation, this ministry was born—not to magnify brokenness, but to proclaim the victory of faith in Jesus Christ.</p>
+                
+                <div class="scripture-banner">
+                    <p>"This is the victory that has overcome the world—even our faith." — 1 John 5:4</p>
                 </div>
                 
-                <div class="about-text">
-                    <h3>Priscar Werunga - Founder</h3>
-                    <p>I am a follower of Christ and the founder of Faith Over Brokenness Ministries. My journey has been marked by trials, but God's grace has turned every test into a testimony. Through His love, I discovered that brokenness is not the end—it's the place where faith rises.</p>
-                    
-                    <p>My calling is to encourage, heal, restore, and disciple others, releasing them into their God-given purpose. I share the message of hope that in Christ we overcome, and that no season of pain is wasted when placed in His hands.</p>
-                    
-                    <p>Faith Over Brokenness is not just my story—it's an invitation for others to experience the same transforming power of Jesus Christ.</p>
-                    
-                    <a href="about.html" class="btn">Learn More About Us</a>
+                <p>Faith Over Brokenness Ministries exists to heal the wounded, restore the weary, disciple believers, and release them into their God-given destiny. Just as God turned my ashes into beauty, this ministry carries the testimony that He can do the same for every life that yields to Him.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="section" style="background: var(--soft-grey);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Vision & Mission</h2>
+                <p>Our calling and purpose in Christ</p>
+            </div>
+            
+            <div class="vision-mission-grid">
+                <div class="vision-card">
+                    <h3><i class="fas fa-eye"></i> Vision</h3>
+                    <p>"To raise a generation that is healed, restored, discipled, and released to walk in their God-given purpose, bearing testimony of Christ."</p>
+                </div>
+                
+                <div class="mission-card">
+                    <h3><i class="fas fa-heart"></i> Mission</h3>
+                    <p>"Through the Word, Spirit, and Christ-centered discipleship, Faith Over Brokenness Ministries journeys with the broken, lifting them from despair to restoration, discipleship, and release into their eternal purpose in Christ."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Ministries Section -->
-    <section class="section ministries">
+    <!-- Core Objectives Section -->
+    <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Our Ministries</h2>
-                <p>We serve through various ministries to bring healing and restoration</p>
+                <h2>Core Objectives</h2>
+                <p>How we serve the body of Christ</p>
             </div>
             
-            <div class="ministries-grid">
-                <div class="ministry-card">
-                    <div class="ministry-icon">
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <div class="objective-icon">
                         <i class="fas fa-cross"></i>
                     </div>
-                    <h3>Evangelism & Outreach</h3>
-                    <p>Sharing the message of salvation through Christ locally and globally using digital platforms, missions, and community outreach.</p>
+                    <h4>Evangelism & Outreach</h4>
+                    <p>Share the message of salvation through Christ locally and globally using digital platforms, missions, and community outreach.</p>
                 </div>
                 
-                <div class="ministry-card">
-                    <div class="ministry-icon">
+                <div class="objective-card">
+                    <div class="objective-icon">
                         <i class="fas fa-bible"></i>
                     </div>
-                    <h3>Discipleship & Teaching</h3>
-                    <p>Establishing structured discipleship programs rooted in Scripture to help believers grow in faith, obedience, and love.</p>
+                    <h4>Discipleship & Teaching</h4>
+                    <p>Establish structured discipleship programs rooted in Scripture to help believers grow in faith, obedience, and love.</p>
                 </div>
                 
-                <div class="ministry-card">
-                    <div class="ministry-icon">
+                <div class="objective-card">
+                    <div class="objective-icon">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Restoration & Healing</h3>
-                    <p>Ministering to the brokenhearted, marginalized, and wounded by offering prayer, counseling, and Christ-centered support.</p>
+                    <h4>Restoration & Healing</h4>
+                    <p>Minister to the brokenhearted, marginalized, and wounded by offering prayer, counseling, and Christ-centered support.</p>
                 </div>
                 
-                <div class="ministry-card">
-                    <div class="ministry-icon">
+                <div class="objective-card">
+                    <div class="objective-icon">
                         <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>Empowerment & Equipping</h3>
-                    <p>Training believers to discover and operate in their God-given gifts and callings for service in the Kingdom.</p>
+                    <h4>Empowerment & Equipping</h4>
+                    <p>Train believers to discover and operate in their God-given gifts and callings for service in the Kingdom.</p>
                 </div>
                 
-                <div class="ministry-card">
-                    <div class="ministry-icon">
+                <div class="objective-card">
+                    <div class="objective-icon">
                         <i class="fas fa-pray"></i>
                     </div>
-                    <h3>Worship & Prayer</h3>
-                    <p>Cultivating a lifestyle of intimacy with God through worship gatherings, intercession, and teaching on the secret place.</p>
+                    <h4>Worship & Prayer</h4>
+                    <p>Cultivate a lifestyle of intimacy with God through worship gatherings, intercession, and teaching on the secret place.</p>
                 </div>
                 
-                <div class="ministry-card">
-                    <div class="ministry-icon">
+                <div class="objective-card">
+                    <div class="objective-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Community & Fellowship</h3>
-                    <p>Building strong Christ-centered communities that foster unity, accountability, and love among believers.</p>
+                    <h4>Community & Fellowship</h4>
+                    <p>Build strong Christ-centered communities that foster unity, accountability, and love among believers.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta">
+    <!-- Scriptural Foundation Section -->
+    <section class="section" style="background: var(--soft-grey);">
         <div class="container">
-            <h2>Join Us in Our Mission</h2>
-            <p>Your support helps us reach the broken with the love of Christ. Together, we can change lives through the gospel, discipleship, and community outreach.</p>
-            <a href="give.html" class="btn btn-gold">Partner With Us Today</a>
+            <div class="scripture-foundation">
+                <h3>Scriptural Foundation</h3>
+                <div class="scripture-list">
+                    <div class="scripture-item">
+                        <strong>Matthew 28:18–20</strong><br>
+                        "And Jesus came and said to them, 'All authority in heaven and on earth has been given to me. Go therefore and make disciples of all nations...'"
+                    </div>
+                    <div class="scripture-item">
+                        <strong>1 John 5:4</strong><br>
+                        "For everyone born of God overcomes the world. This is the victory that has overcome the world—even our faith."
+                    </div>
+                    <div class="scripture-item">
+                        <strong>Isaiah 61:1</strong><br>
+                        "The Spirit of the Sovereign Lord is on me, because the Lord has anointed me to proclaim good news to the poor. He has sent me to bind up the brokenhearted..."
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

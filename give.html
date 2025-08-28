@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give / Partner With Us - Faith Over Brokenness Ministries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --royal-blue: #4169E1;
+            --gold: #FFD700;
+            --white: #FFFFFF;
+            --soft-grey: #F5F5F5;
+            --deep-purple: #4B0082;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--royal-blue);
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--deep-purple);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--royal-blue);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--deep-purple);
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-gold {
+            background: var(--gold);
+            color: #333;
+        }
+        
+        .btn-gold:hover {
+            background: var(--deep-purple);
+            color: var(--gold);
+        }
+        
+        .btn-large {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--deep-purple);
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .scripture-banner {
+            background: var(--royal-blue);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            margin: 30px 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--royal-blue);
+        }
+        
+        .logo span {
+            color: var(--gold);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--royal-blue);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--royal-blue);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(65, 105, 225, 0.8), rgba(75, 0, 130, 0.8)), url('https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Introduction Section */
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .intro-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        /* Biblical Foundation */
+        .biblical-foundation {
+            background: var(--soft-grey);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .biblical-foundation h3 {
+            color: var(--deep-purple);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .scripture-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .scripture-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .scripture-item strong {
+            color: var(--royal-blue);
+        }
+        
+        /* Ways to Give */
+        .ways-to-give {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .give-method {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .give-method:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .give-icon {
+            font-size: 2.5rem;
+            color: var(--royal-blue);
+            margin-bottom: 20px;
+        }
+        
+        .give-method h4 {
+            color: var(--deep-purple);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .give-method p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        /* Partnership Levels */
+        .partnership-levels {
+            background: var(--soft-grey);
+        }
+        
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .partnership-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .partnership-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gold);
+        }
+        
+        .partnership-amount {
+            font-size: 2rem;
+            color: var(--royal-blue);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .partnership-title {
+            color: var(--deep-purple);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .partnership-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        /* Impact Stories */
+        .impact-stories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .impact-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--gold);
+        }
+        
+        .impact-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .impact-author {
+            color: var(--royal-blue);
+            font-weight: 500;
+        }
+        
+        /* Give Now Section */
+        .give-now-section {
+            background: var(--soft-grey);
+            text-align: center;
+        }
+        
+        .give-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(rgba(65, 105, 225, 0.9), rgba(65, 105, 225, 0.9)), url('https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--deep-purple);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--soft-grey);
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--gold);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--deep-purple);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: var(--white);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .give-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="public/images/logo ministry.jpg" alt="Faith Over Brokenness Logo">
+                <h1>Faith Over <span>Brokenness</span></h1>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="discipleship.html">Discipleship</a></li>
+                    <li><a href="prayer.html">Prayer</a></li>
+                    <li><a href="give.html" style="color: var(--royal-blue);">Give</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Partner With Us</h1>
+            <p>Building God's Kingdom together</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container">
+            <div class="intro-content">
+                <p>At Faith Over Brokenness Ministries, we believe that giving is an act of worship and faith. Every seed sown helps us proclaim Christ, disciple believers, and bring healing to the brokenhearted. Through your generosity, lives are restored, families are strengthened, and the gospel of Jesus Christ reaches farther.</p>
+                
+                <p>Together, we are building a legacy of faith and victory.</p>
+                
+                <div class="scripture-banner">
+                    <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." — 2 Corinthians 9:7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biblical Foundation Section -->
+    <section class="section" style="background: var(--soft-grey);">
+        <div class="container">
+            <div class="biblical-foundation">
+                <h3>Biblical Foundation for Giving</h3>
+                <div class="scripture-list">
+                    <div class="scripture-item">
+                        <strong>2 Corinthians 9:7</strong><br>
+                        "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
+                    </div>
+                    <div class="scripture-item">
+                        <strong>Luke 6:38</strong><br>
+                        "Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap."
+                    </div>
+                    <div class="scripture-item">
+                        <strong>Philippians 4:17</strong><br>
+                        "Not that I desire your gifts; what I desire is that more be credited to your account."
+                    </div>
+                </div>
+                <div class="intro-content" style="margin-top: 30px;">
+                    <p>Giving is not just about meeting needs—it's about advancing God's Kingdom and storing up eternal treasures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Give Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ways to Give</h2>
+                <p>Multiple options to support the ministry</p>
+            </div>
+            
+            <div class="ways-to-give">
+                <div class="give-method">
+                    <div class="give-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h4>Online Giving</h4>
+                    <p>Secure giving through PayPal, Mobile Money, or Bank Transfer.</p>
+                    <a href="#give-now" class="btn">Give Online</a>
+                </div>
+                
+                <div class="give-method">
+                    <div class="give-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h4>In-Kind Support</h4>
+                    <p>Donations of food, clothing, and resources to support outreach.</p>
+                    <a href="contact.html" class="btn">Contact Us</a>
+                </div>
+                
+                <div class="give-method">
+                    <div class="give-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Monthly Partnership</h4>
+                    <p>Join as a monthly partner to sustain ministry activities.</p>
+                    <a href="#partnership" class="btn">Become a Partner</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Partner Section -->
+    <section class="section" style="background: var(--soft-grey);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Partner With Us?</h2>
+                <p>Your partnership empowers us to transform lives</p>
+            </div>
+            
+            <div class="ways-to-give">
+                <div class="give-method">
+                    <div class="give-icon">
+                        <i class="fas fa-cross"></i>
+                    </div>
+                    <h4>Share the Gospel</h4>
+                    <p>Share the gospel of Jesus Christ through media, outreach, and missions.</p>
+                </div>
+                
+                <div class="give-method">
+                    <div class="give-icon">
+                        <i class="fas fa-bible"></i>
+                    </div>
+                    <h4>Run Discipleship Programs</h4>
+                    <p>Run discipleship programs that equip believers in faith and victory.</p>
+                </div>
+                
+                <div class="give-method">
+                    <div class="give-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Support the Brokenhearted</h4>
+                    <p>Provide prayer, counseling, and support for the brokenhearted.</p>
+                </div>
+                
+                <div class="give-method">
+                    <div class="give-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Strengthen Communities</h4>
+                    <p>Strengthen communities through acts of love and service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Levels Section -->
+    <section class="section partnership-levels" id="partnership">
+        <div class="container">
+            <div class="section-title">
+                <h2>Partnership Levels</h2>
+                <p>Choose a level that fits your heart to give</p>
+            </div>
+            
+            <div class="partnership-grid">
+                <div class="partnership-card">
+                    <div class="partnership-amount">$10/month</div>
+                    <div class="partnership-title">Faith Builder Partner</div>
+                    <div class="partnership-description">Supports discipleship resources and Bible study materials.</div>
+                    <a href="#give-now" class="btn">Join Now</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-amount">$25/month</div>
+                    <div class="partnership-title">Restoration Partner</div>
+                    <div class="partnership-description">Supports prayer and counseling ministries for the brokenhearted.</div>
+                    <a href="#give-now" class="btn">Join Now</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-amount">$50+/month</div>
+                    <div class="partnership-title">Great Commission Partner</div>
+                    <div class="partnership-description">Empowers outreach and missions to reach the lost.</div>
+                    <a href="#give-now" class="btn">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stories Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Impact Stories</h2>
+                <p>See how your giving transforms lives</p>
+            </div>
+            
+            <div class="impact-stories">
+                <div class="impact-card">
+                    <p class="impact-text">"Through the ministry's outreach, my family received hope and restoration during our darkest season."</p>
+                    <p class="impact-author">— Mary K.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <p class="impact-text">"The discipleship program changed my walk with God—I now live in victory and help others find theirs."</p>
+                    <p class="impact-author">— James M.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <p class="impact-text">"Because of the prayer ministry, I learned to trust God completely. My faith has never been stronger."</p>
+                    <p class="impact-author">— Ruth W.</p>
+                </div>
+            </div>
+            
+            <div class="intro-content" style="margin-top: 40px;">
+                <p>Your giving is not just charity—it is Kingdom investment with eternal impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Give Now Section -->
+    <section class="section give-now-section" id="give-now">
+        <div class="container">
+            <div class="section-title">
+                <h2>Give Now</h2>
+                <p>Your generosity makes a difference</p>
+            </div>
+            
+            <div class="intro-content">
+                <p>Choose your preferred method to give and be part of transforming lives through Christ.</p>
+                
+                <div class="give-buttons">
+                    <a href="mailto:info@faithoverbrokenness.co.ke?subject=Online Giving" class="btn btn-large">PayPal / Online</a>
+                    <a href="tel:+254737302947" class="btn btn-gold btn-large">Mobile Money</a>
+                    <a href="contact.html" class="btn btn-large">Bank Transfer</a>
+                </div>
+                
+                <div class="scripture-banner">
+                    <p>"Remember this: Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously." — 2 Corinthians 9:6</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Plant Seeds of Faith</h2>
+            <p>When you give, you plant seeds of faith that God multiplies for His glory. Would you prayerfully consider partnering with us today? Together, we can transform brokenness into testimonies of victory through Christ.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="#give-now" class="btn btn-gold btn-large">Give Now</a>
+                <a href="#partnership" class="btn btn-large">Become a Partner</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Faith Over Brokenness</h3>
+                    <p>Raising a generation that is healed, restored, discipled, and released to walk in their God-given purpose.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="discipleship.html">Discipleship</a></li>
+                        <li><a href="prayer.html">Prayer</a></li>
+                        <li><a href="give.html">Give</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> info@faithoverbrokenness.co.ke</p>
+                    <p><i class="fas fa-phone"></i> (+254) 737302947</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kenya</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Faith Over Brokenness Ministries. All rights reserved.</p>
+                <p class="scripture-banner">"Go therefore and make disciples of all nations…" (Matthew 28:19)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('mobile-menu');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

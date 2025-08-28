@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer & Worship - Faith Over Brokenness Ministries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --royal-blue: #4169E1;
+            --gold: #FFD700;
+            --white: #FFFFFF;
+            --soft-grey: #F5F5F5;
+            --deep-purple: #4B0082;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--royal-blue);
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--deep-purple);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--royal-blue);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--deep-purple);
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-gold {
+            background: var(--gold);
+            color: #333;
+        }
+        
+        .btn-gold:hover {
+            background: var(--deep-purple);
+            color: var(--gold);
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--deep-purple);
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .scripture-banner {
+            background: var(--royal-blue);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            margin: 30px 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--royal-blue);
+        }
+        
+        .logo span {
+            color: var(--gold);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--royal-blue);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--royal-blue);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(65, 105, 225, 0.8), rgba(75, 0, 130, 0.8)), url('https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Introduction Section */
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .intro-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        /* Scripture Foundation */
+        .scripture-foundation {
+            background: var(--soft-grey);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .scripture-foundation h3 {
+            color: var(--deep-purple);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .scripture-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .scripture-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .scripture-item strong {
+            color: var(--royal-blue);
+        }
+        
+        /* Prayer Ministry Grid */
+        .prayer-ministry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .ministry-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .ministry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .ministry-icon {
+            font-size: 2.5rem;
+            color: var(--royal-blue);
+            margin-bottom: 20px;
+        }
+        
+        .ministry-card h4 {
+            color: var(--deep-purple);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .ministry-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Prayer Request Form */
+        .prayer-request-section {
+            background: var(--soft-grey);
+        }
+        
+        .prayer-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--deep-purple);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--royal-blue);
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        /* Testimonies Section */
+        .testimonies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .testimony-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--gold);
+        }
+        
+        .testimony-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .testimony-author {
+            color: var(--royal-blue);
+            font-weight: 500;
+        }
+        
+        /* Worship Life */
+        .worship-life {
+            background: var(--soft-grey);
+        }
+        
+        .worship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .worship-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .worship-icon {
+            font-size: 2rem;
+            color: var(--royal-blue);
+            margin-bottom: 15px;
+        }
+        
+        .worship-item h4 {
+            color: var(--deep-purple);
+            margin-bottom: 10px;
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(rgba(65, 105, 225, 0.9), rgba(65, 105, 225, 0.9)), url('https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--deep-purple);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--soft-grey);
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--gold);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--deep-purple);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: var(--white);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .prayer-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="public/images/logo ministry.jpg" alt="Faith Over Brokenness Logo">
+                <h1>Faith Over <span>Brokenness</span></h1>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="discipleship.html">Discipleship</a></li>
+                    <li><a href="prayer.html" style="color: var(--royal-blue);">Prayer</a></li>
+                    <li><a href="give.html">Give</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Prayer & Worship</h1>
+            <p>Drawing near to God in prayer and worship</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container">
+            <div class="intro-content">
+                <p>At the heart of Faith Over Brokenness Ministries is a deep desire to draw near to God in prayer and worship. We believe prayer is not just a request line but a lifeline—our constant communion with the Father. Worship is more than a song; it is the posture of our hearts, surrendering to the One who restores and sustains us.</p>
+                
+                <p>Here, we cultivate the secret place, walk under the shadow of the Almighty, and dwell in the still waters of His presence.</p>
+                
+                <div class="scripture-banner">
+                    <p>"He leads me beside quiet waters, He restores my soul." — Psalm 23:2-3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scriptural Foundation Section -->
+    <section class="section" style="background: var(--soft-grey);">
+        <div class="container">
+            <div class="scripture-foundation">
+                <h3>Scriptural Foundation</h3>
+                <div class="scripture-list">
+                    <div class="scripture-item">
+                        <strong>Psalm 23:2–3</strong><br>
+                        "He leads me beside quiet waters, He restores my soul. He guides me along the right paths for his name's sake."
+                    </div>
+                    <div class="scripture-item">
+                        <strong>Psalm 91:1</strong><br>
+                        "Whoever dwells in the shelter of the Most High will rest in the shadow of the Almighty."
+                    </div>
+                    <div class="scripture-item">
+                        <strong>John 4:24</strong><br>
+                        "God is spirit, and His worshipers must worship in the Spirit and in truth."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayer Ministry Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Prayer Ministry</h2>
+                <p>Standing in the gap through prayer</p>
+            </div>
+            
+            <div class="prayer-ministry-grid">
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h4>Intercession</h4>
+                    <p>We stand in the gap for individuals, families, and nations, believing in God's power to transform.</p>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Prayer Requests</h4>
+                    <p>Whatever your need, we are here to lift it before the throne of grace.</p>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Prayer Partners</h4>
+                    <p>Join hands with us in a network of believers committed to prayer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayer Request Section -->
+    <section class="section prayer-request-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Submit a Prayer Request</h2>
+                <p>"Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God." (Philippians 4:6)</p>
+            </div>
+            
+            <div class="prayer-form">
+                <p style="text-align: center; margin-bottom: 30px; color: #666;">No matter what you are facing, you are not alone. Submit your prayer request below, and our team will faithfully pray with you.</p>
+                
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name (Optional)</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email (Optional)</label>
+                        <input type="email" id="email" name="email" placeholder="Your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="prayer-request">Prayer Request *</label>
+                        <textarea id="prayer-request" name="prayer-request" placeholder="Share your prayer request here..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="updates" name="updates">
+                        <label for="updates" style="display: inline; margin-left: 10px;">I would like to receive prayer updates and encouragement</label>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Submit Prayer Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Worship Life Section -->
+    <section class="section worship-life">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Worship Life</h2>
+                <p>Cultivating intimacy with God</p>
+            </div>
+            
+            <div class="worship-grid">
+                <div class="worship-item">
+                    <div class="worship-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Lifestyle of Worship</h4>
+                    <p>Teaching believers to live in constant devotion, not just on Sundays.</p>
+                </div>
+                
+                <div class="worship-item">
+                    <div class="worship-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Worship Gatherings</h4>
+                    <p>Times of corporate worship and intimacy with God.</p>
+                </div>
+                
+                <div class="worship-item">
+                    <div class="worship-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <h4>Personal Devotion</h4>
+                    <p>Encouraging believers to cultivate private worship in the secret place.</p>
+                </div>
+            </div>
+            
+            <div class="intro-content" style="margin-top: 40px;">
+                <p>Worship is where brokenness is mended, faith is strengthened, and hearts are aligned with God's will.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonies Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonies</h2>
+                <p>Stories of God's faithfulness</p>
+            </div>
+            
+            <div class="testimonies-grid">
+                <div class="testimony-card">
+                    <p class="testimony-text">"I was broken, but through prayer, God restored my peace. The ministry team stood with me during my darkest hour."</p>
+                    <p class="testimony-author">— Sarah M.</p>
+                </div>
+                
+                <div class="testimony-card">
+                    <p class="testimony-text">"Worship helped me find healing in the presence of Jesus. I discovered that God's love never fails."</p>
+                    <p class="testimony-author">— David K.</p>
+                </div>
+                
+                <div class="testimony-card">
+                    <p class="testimony-text">"Through the prayer ministry, I learned to trust God in every season. My faith has grown stronger."</p>
+                    <p class="testimony-author">— Grace W.</p>
+                </div>
+            </div>
+            
+            <div class="intro-content" style="margin-top: 40px;">
+                <p>We celebrate testimonies because they remind us that God is faithful, and He is still working miracles today.</p>
+                <a href="contact.html" class="btn btn-gold">Share Your Testimony</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Join Us in Prayer</h2>
+            <p>Would you like us to pray with you? Or do you have a testimony of what God has done? Join us in this altar of prayer and worship—where brokenness meets the presence of God, and lives are transformed.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="#prayer-request" class="btn btn-gold">Request Prayer</a>
+                <a href="contact.html" class="btn">Join Worship Gatherings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Faith Over Brokenness</h3>
+                    <p>Raising a generation that is healed, restored, discipled, and released to walk in their God-given purpose.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="discipleship.html">Discipleship</a></li>
+                        <li><a href="prayer.html">Prayer</a></li>
+                        <li><a href="give.html">Give</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> info@faithoverbrokenness.co.ke</p>
+                    <p><i class="fas fa-phone"></i> (+254) 737302947</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kenya</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Faith Over Brokenness Ministries. All rights reserved.</p>
+                <p class="scripture-banner">"Go therefore and make disciples of all nations…" (Matthew 28:19)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('mobile-menu');
+        });
+
+        // Smooth scroll to prayer request form
+        document.querySelector('a[href="#prayer-request"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.prayer-request-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
