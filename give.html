@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Give / Partner With Us - Faith Over Brokenness Ministries</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         :root {
@@ -19,7 +22,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .scripture-quote-elegant {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.3rem;
         }
         
         body {
@@ -62,7 +74,7 @@
             background: var(--deep-purple);
             color: var(--gold);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(65, 105, 225, 0.6);
         }
         
         .btn-gold {
@@ -73,6 +85,28 @@
         .btn-gold:hover {
             background: var(--deep-purple);
             color: var(--gold);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+        
+        .btn-outline-royal-blue {
+            background: transparent;
+            color: var(--royal-blue);
+            border: 2px solid var(--royal-blue);
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .btn-outline-royal-blue:hover {
+            background: var(--royal-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(65, 105, 225, 0.6);
         }
         
         .btn-large {
@@ -350,6 +384,16 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border-left: 4px solid var(--gold);
+            text-align: center;
+        }
+        
+        .impact-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
         }
         
         .impact-text {
@@ -677,7 +721,7 @@
                 <p>Together, we are building a legacy of faith and victory.</p>
                 
                 <div class="scripture-banner">
-                    <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." — 2 Corinthians 9:7</p>
+                    <p class="scripture-quote-elegant">"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." — 2 Corinthians 9:7</p>
                 </div>
             </div>
         </div>
@@ -724,7 +768,7 @@
                     </div>
                     <h4>Online Giving</h4>
                     <p>Secure giving through PayPal, Mobile Money, or Bank Transfer.</p>
-                    <a href="#give-now" class="btn">Give Online</a>
+                    <a href="#give-now" class="btn-gold">Give Online</a>
                 </div>
                 
                 <div class="give-method">
@@ -733,7 +777,7 @@
                     </div>
                     <h4>In-Kind Support</h4>
                     <p>Donations of food, clothing, and resources to support outreach.</p>
-                    <a href="contact.html" class="btn">Contact Us</a>
+                    <a href="contact.html" class="btn-outline-royal-blue">Contact Us</a>
                 </div>
                 
                 <div class="give-method">
@@ -742,7 +786,7 @@
                     </div>
                     <h4>Monthly Partnership</h4>
                     <p>Join as a monthly partner to sustain ministry activities.</p>
-                    <a href="#partnership" class="btn">Become a Partner</a>
+                    <a href="#partnership" class="btn-gold">Become a Partner</a>
                 </div>
             </div>
         </div>
@@ -805,21 +849,21 @@
                     <div class="partnership-amount">$10/month</div>
                     <div class="partnership-title">Faith Builder Partner</div>
                     <div class="partnership-description">Supports discipleship resources and Bible study materials.</div>
-                    <a href="#give-now" class="btn">Join Now</a>
+                    <a href="#give-now" class="btn-gold">Join Now</a>
                 </div>
                 
                 <div class="partnership-card">
                     <div class="partnership-amount">$25/month</div>
                     <div class="partnership-title">Restoration Partner</div>
                     <div class="partnership-description">Supports prayer and counseling ministries for the brokenhearted.</div>
-                    <a href="#give-now" class="btn">Join Now</a>
+                    <a href="#give-now" class="btn-gold">Join Now</a>
                 </div>
                 
                 <div class="partnership-card">
                     <div class="partnership-amount">$50+/month</div>
                     <div class="partnership-title">Great Commission Partner</div>
                     <div class="partnership-description">Empowers outreach and missions to reach the lost.</div>
-                    <a href="#give-now" class="btn">Join Now</a>
+                    <a href="#give-now" class="btn-gold">Join Now</a>
                 </div>
             </div>
         </div>
@@ -835,16 +879,19 @@
             
             <div class="impact-stories">
                 <div class="impact-card">
+                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mary K." class="impact-image">
                     <p class="impact-text">"Through the ministry's outreach, my family received hope and restoration during our darkest season."</p>
                     <p class="impact-author">— Mary K.</p>
                 </div>
                 
                 <div class="impact-card">
+                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="James M." class="impact-image">
                     <p class="impact-text">"The discipleship program changed my walk with God—I now live in victory and help others find theirs."</p>
                     <p class="impact-author">— James M.</p>
                 </div>
                 
                 <div class="impact-card">
+                    <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Ruth W." class="impact-image">
                     <p class="impact-text">"Because of the prayer ministry, I learned to trust God completely. My faith has never been stronger."</p>
                     <p class="impact-author">— Ruth W.</p>
                 </div>
@@ -868,13 +915,13 @@
                 <p>Choose your preferred method to give and be part of transforming lives through Christ.</p>
                 
                 <div class="give-buttons">
-                    <a href="mailto:info@faithoverbrokenness.co.ke?subject=Online Giving" class="btn btn-large">PayPal / Online</a>
+                    <a href="mailto:info@faithoverbrokenness.co.ke?subject=Online Giving" class="btn-gold btn-large">PayPal / Online</a>
                     <a href="tel:+254737302947" class="btn btn-gold btn-large">Mobile Money</a>
-                    <a href="contact.html" class="btn btn-large">Bank Transfer</a>
+                    <a href="contact.html" class="btn-outline-royal-blue btn-large">Bank Transfer</a>
                 </div>
                 
                 <div class="scripture-banner">
-                    <p>"Remember this: Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously." — 2 Corinthians 9:6</p>
+                    <p class="scripture-quote-elegant">"Remember this: Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously." — 2 Corinthians 9:6</p>
                 </div>
             </div>
         </div>
@@ -886,8 +933,8 @@
             <h2>Plant Seeds of Faith</h2>
             <p>When you give, you plant seeds of faith that God multiplies for His glory. Would you prayerfully consider partnering with us today? Together, we can transform brokenness into testimonies of victory through Christ.</p>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="#give-now" class="btn btn-gold btn-large">Give Now</a>
-                <a href="#partnership" class="btn btn-large">Become a Partner</a>
+                <a href="#give-now" class="btn-gold btn-large">Give Now</a>
+                <a href="#partnership" class="btn-outline-royal-blue btn-large">Become a Partner</a>
             </div>
         </div>
     </section>
@@ -930,7 +977,9 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2025 Faith Over Brokenness Ministries. All rights reserved.</p>
-                <p class="scripture-banner">"Go therefore and make disciples of all nations…" (Matthew 28:19)</p>
+                <div class="scripture-banner">
+                    <p class="scripture-quote-elegant">"Go therefore and make disciples of all nations…" (Matthew 28:19)</p>
+                </div>
             </div>
         </div>
     </footer>

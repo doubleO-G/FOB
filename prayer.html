@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prayer & Worship - Faith Over Brokenness Ministries</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         :root {
@@ -19,7 +22,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .scripture-quote-elegant {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.3rem;
         }
         
         body {
@@ -62,7 +74,7 @@
             background: var(--deep-purple);
             color: var(--gold);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(65, 105, 225, 0.6);
         }
         
         .btn-gold {
@@ -73,6 +85,28 @@
         .btn-gold:hover {
             background: var(--deep-purple);
             color: var(--gold);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+        
+        .btn-outline-royal-blue {
+            background: transparent;
+            color: var(--royal-blue);
+            border: 2px solid var(--royal-blue);
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .btn-outline-royal-blue:hover {
+            background: var(--royal-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(65, 105, 225, 0.6);
         }
         
         .section {
@@ -341,6 +375,16 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border-left: 4px solid var(--gold);
+            text-align: center;
+        }
+        
+        .testimony-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
         }
         
         .testimony-text {
@@ -684,7 +728,7 @@
                 <p>Here, we cultivate the secret place, walk under the shadow of the Almighty, and dwell in the still waters of His presence.</p>
                 
                 <div class="scripture-banner">
-                    <p>"He leads me beside quiet waters, He restores my soul." — Psalm 23:2-3</p>
+                    <p class="scripture-quote-elegant">"He leads me beside quiet waters, He restores my soul." — Psalm 23:2-3</p>
                 </div>
             </div>
         </div>
@@ -837,16 +881,19 @@
             
             <div class="testimonies-grid">
                 <div class="testimony-card">
+                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sarah M." class="testimony-image">
                     <p class="testimony-text">"I was broken, but through prayer, God restored my peace. The ministry team stood with me during my darkest hour."</p>
                     <p class="testimony-author">— Sarah M.</p>
                 </div>
                 
                 <div class="testimony-card">
+                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="David K." class="testimony-image">
                     <p class="testimony-text">"Worship helped me find healing in the presence of Jesus. I discovered that God's love never fails."</p>
                     <p class="testimony-author">— David K.</p>
                 </div>
                 
                 <div class="testimony-card">
+                    <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Grace W." class="testimony-image">
                     <p class="testimony-text">"Through the prayer ministry, I learned to trust God in every season. My faith has grown stronger."</p>
                     <p class="testimony-author">— Grace W.</p>
                 </div>
@@ -854,7 +901,7 @@
             
             <div class="intro-content" style="margin-top: 40px;">
                 <p>We celebrate testimonies because they remind us that God is faithful, and He is still working miracles today.</p>
-                <a href="contact.html" class="btn btn-gold">Share Your Testimony</a>
+                <a href="contact.html" class="btn-gold">Share Your Testimony</a>
             </div>
         </div>
     </section>
@@ -865,8 +912,8 @@
             <h2>Join Us in Prayer</h2>
             <p>Would you like us to pray with you? Or do you have a testimony of what God has done? Join us in this altar of prayer and worship—where brokenness meets the presence of God, and lives are transformed.</p>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="#prayer-request" class="btn btn-gold">Request Prayer</a>
-                <a href="contact.html" class="btn">Join Worship Gatherings</a>
+                <a href="#prayer-request" class="btn-gold">Request Prayer</a>
+                <a href="contact.html" class="btn-outline-royal-blue">Join Worship Gatherings</a>
             </div>
         </div>
     </section>
@@ -909,7 +956,9 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2025 Faith Over Brokenness Ministries. All rights reserved.</p>
-                <p class="scripture-banner">"Go therefore and make disciples of all nations…" (Matthew 28:19)</p>
+                <div class="scripture-banner">
+                    <p class="scripture-quote-elegant">"Go therefore and make disciples of all nations…" (Matthew 28:19)</p>
+                </div>
             </div>
         </div>
     </footer>

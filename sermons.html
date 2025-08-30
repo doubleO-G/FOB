@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sermons & Teachings - Faith Over Brokenness Ministries</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         :root {
@@ -19,7 +22,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .scripture-quote-elegant {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.3rem;
         }
         
         body {
@@ -62,7 +74,7 @@
             background: var(--deep-purple);
             color: var(--gold);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(65, 105, 225, 0.6);
         }
         
         .btn-gold {
@@ -73,6 +85,28 @@
         .btn-gold:hover {
             background: var(--deep-purple);
             color: var(--gold);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+        
+        .btn-outline-royal-blue {
+            background: transparent;
+            color: var(--royal-blue);
+            border: 2px solid var(--royal-blue);
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .btn-outline-royal-blue:hover {
+            background: var(--royal-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 15px rgba(65, 105, 225, 0.6);
         }
         
         .section {
@@ -611,8 +645,8 @@
                             <span><i class="fas fa-clock"></i> 45 min</span>
                         </div>
                         <div class="sermon-actions">
-                            <button class="btn btn-small">Watch</button>
-                            <button class="btn btn-gold btn-small">Download</button>
+                            <button class="btn btn-gold btn-small">Watch</button>
+                            <button class="btn-outline-royal-blue btn-small">Download</button>
                         </div>
                     </div>
                 </div>
@@ -630,8 +664,8 @@
                             <span><i class="fas fa-clock"></i> 38 min</span>
                         </div>
                         <div class="sermon-actions">
-                            <button class="btn btn-small">Watch</button>
-                            <button class="btn btn-gold btn-small">Download</button>
+                            <button class="btn btn-gold btn-small">Watch</button>
+                            <button class="btn-outline-royal-blue btn-small">Download</button>
                         </div>
                     </div>
                 </div>
@@ -649,8 +683,8 @@
                             <span><i class="fas fa-clock"></i> 42 min</span>
                         </div>
                         <div class="sermon-actions">
-                            <button class="btn btn-small">Watch</button>
-                            <button class="btn btn-gold btn-small">Download</button>
+                            <button class="btn btn-gold btn-small">Watch</button>
+                            <button class="btn-outline-royal-blue btn-small">Download</button>
                         </div>
                     </div>
                 </div>
@@ -668,8 +702,8 @@
                             <span><i class="fas fa-clock"></i> 50 min</span>
                         </div>
                         <div class="sermon-actions">
-                            <button class="btn btn-small">Watch</button>
-                            <button class="btn btn-gold btn-small">Download</button>
+                            <button class="btn btn-gold btn-small">Watch</button>
+                            <button class="btn-outline-royal-blue btn-small">Download</button>
                         </div>
                     </div>
                 </div>
@@ -687,8 +721,8 @@
                             <span><i class="fas fa-clock"></i> 35 min</span>
                         </div>
                         <div class="sermon-actions">
-                            <button class="btn btn-small">Watch</button>
-                            <button class="btn btn-gold btn-small">Download</button>
+                            <button class="btn btn-gold btn-small">Watch</button>
+                            <button class="btn-outline-royal-blue btn-small">Download</button>
                         </div>
                     </div>
                 </div>
@@ -706,8 +740,8 @@
                             <span><i class="fas fa-clock"></i> 47 min</span>
                         </div>
                         <div class="sermon-actions">
-                            <button class="btn btn-small">Watch</button>
-                            <button class="btn btn-gold btn-small">Download</button>
+                            <button class="btn btn-gold btn-small">Watch</button>
+                            <button class="btn-outline-royal-blue btn-small">Download</button>
                         </div>
                     </div>
                 </div>
@@ -723,10 +757,10 @@
                 <p>We are preparing powerful teachings and sermons that will strengthen your faith and encourage your heart. Stay connected with us on social media for updates.</p>
                 
                 <div class="scripture-banner">
-                    <p>"Faith comes by hearing, and hearing by the word of God." — Romans 10:17</p>
+                    <p class="scripture-quote-elegant">"Faith comes by hearing, and hearing by the word of God." — Romans 10:17</p>
                 </div>
                 
-                <a href="contact.html" class="btn">Get Notified</a>
+                <a href="contact.html" class="btn-outline-royal-blue">Get Notified</a>
             </div>
         </div>
     </section>
@@ -769,7 +803,9 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2025 Faith Over Brokenness Ministries. All rights reserved.</p>
-                <p class="scripture-banner">"Go therefore and make disciples of all nations…" (Matthew 28:19)</p>
+                <div class="scripture-banner">
+                    <p class="scripture-quote-elegant">"Go therefore and make disciples of all nations…" (Matthew 28:19)</p>
+                </div>
             </div>
         </div>
     </footer>
